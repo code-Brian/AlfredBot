@@ -5,12 +5,12 @@ class AlfredQuotes {
     }
 
     public String basicGreeting() {
-        return "Hello, lovely to see you. How are you?";
+        return "Hello! Lovely to see you. How are you?";
     }
 
     public String guestGreeting(String name) {
         // Your code here
-        return "place holder for guest greeting return string";
+        return "Hello, "+ name + "." + "lovely to see you.";
     }
 
     public String dateAnnouncement() {
