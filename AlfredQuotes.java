@@ -9,13 +9,12 @@ class AlfredQuotes {
     }
 
     public String guestGreeting(String name) {
-        // Your code here
         return "Hello, "+ name + "." + "lovely to see you.";
     }
 
     public String dateAnnouncement() {
-        // Your code here
-        return "place holder for date annoucnement return string";
+        Date date = new Date();
+        return "It is currently " + date;
     }
 
     public String respondBeforeAlexis(String conversation) {
