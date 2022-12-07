@@ -13,7 +13,7 @@ class AlfredQuotes {
         return "place holder for guest greeting return string";
     }
 
-    public String dateAnnouncement(Date date) {
+    public String dateAnnouncement() {
         // Your code here
         return "place holder for date annoucnement return string";
     }
