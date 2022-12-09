@@ -6,10 +6,11 @@ public class AlfredTest {
         String testGreeting = alfredBot.basicGreeting();
         String testGuestGreeting = alfredBot.guestGreeting("Beth Kane");    
         String testDateAnnouncement = alfredBot.dateAnnouncement();
+        String guestWithDate = alfredBot.guestGreeting("Billy Bob", alfredBot.getFormattedTime());
 
         String alexisTest = alfredBot.respondBeforeAlexis("Play some lo-fi beats.");
-        String alfredTest = alfredBot.respondBeforeAlexis("I can't find my yo-yo. Maybe Alfred will know where it is?");
-        String notRelevantTest = alfredBot.respondBeforeAlexis("Maybe that's what Batman is about? Not winning... Rather, failing...");
+        // String alfredTest = alfredBot.respondBeforeAlexis("I can't find my yo-yo. Maybe Alfred will know where it is?");
+        // String notRelevantTest = alfredBot.respondBeforeAlexis("Maybe that's what Batman is about? Not winning... Rather, failing...");
 
         // Print the greetings to test!
         System.out.println(testGreeting);
@@ -18,6 +19,7 @@ public class AlfredTest {
         System.out.println(testGuestGreeting);
         System.out.println(testDateAnnouncement);
         System.out.println(alexisTest);
+        System.out.println(guestWithDate);
         // System.out.println(alfredTest);
     }
 }

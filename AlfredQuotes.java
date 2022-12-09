@@ -1,5 +1,14 @@
 import java.util.Date;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+
 class AlfredQuotes {
+    public String getFormattedTime() {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formattedTime = DateTimeFormatter.ofPattern("HH:mm");
+        return formattedTime.format(now).toString();
+    }
+
     public String greetWorld() {
         return "Hello, world!";
     }
@@ -10,6 +19,23 @@ class AlfredQuotes {
 
     public String guestGreeting(String name) {
         return "Hello, "+ name + "." + "lovely to see you.";
+    }
+
+    // Sensei bonus overloaded guestGreeting
+    
+    public String guestGreeting(String name, String now) {
+        int timeInt = Integer.parseInt(now.toString());
+        if (timeInt < 1159) {
+            return "Good morning, " + name + "!" + "Lovely to see you.";
+        } else if (timeInt > 1159) {
+            return "Good afternoon," + name + "!" + "Let's have some lunch, soon!";
+        } else if (timeInt > 459) {
+            return "Good evening, " + name + "!" + "What would you like for dinner?";
+        } else if (timeInt < 900) {
+            return "Hello, " + name + "." + "The time is: " + now + "."  + "Alred has retired for the evening.";
+        } else {
+            return "There was a problem getting the time, " + name + "." + "Contact your system administrator for support.";
+        }
     }
 
     public String dateAnnouncement() {
