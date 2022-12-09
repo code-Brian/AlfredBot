@@ -18,8 +18,17 @@ class AlfredQuotes {
     }
 
     public String respondBeforeAlexis(String conversation) {
+        String alfredRetort = "Bloody hell, Bruce! She can't even remote control the Batmobile! Why the hell would you trust her with that sort of thing?";
+        String alfredHumble = "Of course, Mister Wayne.";
+        String nada = "Right. With that, I shall retire.";
         // Your code here
-        return "for snarky response return string";
+        if(conversation.contains("Alexis")) {
+            return alfredRetort;
+        } else if(conversation.contains("Alfred")) {
+            return alfredHumble;
+        } else {
+            return nada;
+        }
     }
 
     // NINJA BONUS
